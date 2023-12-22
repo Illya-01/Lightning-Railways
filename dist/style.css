@@ -1,0 +1,26 @@
+:root {
+   --clr-blue: hsl(209, 53%, 23%);
+   --clr-dark-blue: hsl(209, 73%, 15%);
+   --clr-green: hsl(149, 70%, 65%);
+   --clr-light-grey: hsl(0, 0%, 95%);
+   --clr-grey: hsl(0, 0%, 47%);
+   --clr-white: hsl(0, 0%, 100%);
+
+   --clr-primary: var(--clr-white);
+   --clr-secondary: var(--clr-blue);
+   --clr-tertiary: var(--clr-green);
+}
+
+/* Utilities */
+.container-big {
+   width: min(68rem, 90%);
+   margin-inline: auto;
+}
+
+/* ff: Manrope;
+fw: 400, 700;
+fs: 0.875, 1.5, 2.25, 3 (rem)
+
+ff: Open Sans;
+fw: 400, 600, 700;
+fs: 0.875, 1, 1.25 1.5 (rem) */
