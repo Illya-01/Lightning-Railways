@@ -1,4 +1,4 @@
-@layer reset, base, layout, components, utilities;
+/* @layer reset, base, layout, components, utilities; */
 
 :root {
    --clr-primary-100: hsl(0, 0%, 100%);
