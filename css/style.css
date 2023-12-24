@@ -22,17 +22,21 @@
    --fs-700: 2.25rem;
    --fs-800: 3rem;
 
-   /* sizes: 0.5, 0.75, 1, 1.5, 2, 2.5, 3.5, 4.5, 5, 6, 9, 15 (rem); */
-   --spacing-100: 0.75rem;
+   /* sizes (desktop): 0.5, 0.75, 1, 1.5, 2, 2.5, 3.5, 4.5, 5, 5.25, 6, 9, 13, 15 (rem); */
+   --spacing-100: 0.5rem;
+   --spacing-150: 0.75rem;
    --spacing-200: 1rem;
-   --spacing-300: 1.5rem;
-   --spacing-400: 2rem;
-   --spacing-500: 2.5rem;
-   --spacing-600: 3.5rem;
-   --spacing-700: 4.5rem;
-   --spacing-800: 6rem;
-   --spacing-900: 9rem;
-   --spacing-950: 15rem;
+   --spacing-250: 1.5rem;
+   --spacing-300: 2rem;
+   --spacing-350: 2.5rem;
+   --spacing-400: 3.5rem;
+   --spacing-450: 4.5rem;
+   --spacing-500: 5rem;
+   --spacing-550: 5.25rem;
+   --spacing-600: 6rem;
+   --spacing-650: 9rem;
+   --spacing-700: 13rem;
+   --spacing-750: 15rem;
 }
 
 @layer reset {
@@ -146,7 +150,7 @@
 @layer layout {
    .primary-header {
       padding-top: var(--spacing-400);
-      padding-bottom: var(--spacing-900);
+      padding-bottom: var(--spacing-650);
    }
 
    .nav-wrap {
@@ -170,7 +174,7 @@
 @layer components {
    .button {
       display: inline-flex;
-      padding: var(--spacing-200) var(--spacing-600);
+      padding: var(--spacing-200) var(--spacing-400);
       border: 0;
       border-radius: 100vh;
       font-weight: var(--fw-bold);
@@ -181,7 +185,7 @@
    }
 
    .button[data-width='small'] {
-      padding: 0.5em var(--spacing-500);
+      padding: var(--spacing-100) var(--spacing-350);
    }
 
    .arrow {
@@ -193,7 +197,6 @@
    .logo {
       display: flex;
       align-items: center;
-      /* margin-left: -1rem; */
       font-family: var(--ff-secondary);
       font-size: var(--fs-700);
       font-weight: var(--fw-bold);
@@ -201,8 +204,9 @@
       line-height: 1.2;
    }
 
+   /* todo: move logo left by some amount */
    .logo[data-translated='true'] {
-      margin-left: calc(-1 * var(--spacing-600));
+      margin-left: calc(-1 * var(--spacing-400));
    }
 }
 
@@ -221,13 +225,12 @@
    }
 
    .even-columns {
+      --_column-gap: var(--spacing-250);
       display: grid;
       grid-auto-columns: 1fr;
-      gap: var(--spacing-400);
-   }
+      gap: var(--_column-gap);
 
-   @media (min-width: 50rem) {
-      .even-columns {
+      @media (min-width: 50rem) {
          grid-auto-flow: column;
          grid-auto-columns: 1fr;
       }
@@ -236,25 +239,25 @@
    /* complex but useful grid system instead of containers */
    .content-grid,
    .full-width {
-      --padding-inline: 1rem;
-      --content-max-width: 70rem;
-      --breakout-max-width: 72.5rem;
+      --_padding-inline: 1rem;
+      --_content-max-width: 70rem;
+      --_breakout-max-width: 72.5rem;
 
-      --breakout-size: calc(
-         (var(--breakout-max-width) - var(--content-max-width)) / 2
+      --_breakout-size: calc(
+         (var(--_breakout-max-width) - var(--_content-max-width)) / 2
       );
 
       display: grid;
       grid-template-columns:
-         [full-width-start] minmax(var(--padding-inline), 1fr)
-         [breakout-start] minmax(0, var(--breakout-size))
+         [full-width-start] minmax(var(--_padding-inline), 1fr)
+         [breakout-start] minmax(0, var(--_breakout-size))
          [content-start] min(
-            100% - (var(--padding-inline) * 2),
-            var(--content-max-width)
+            100% - (var(--_padding-inline) * 2),
+            var(--_content-max-width)
          )
          [content-end]
-         minmax(0, var(--breakout-size)) [breakout-end]
-         minmax(var(--padding-inline), 1fr) [full-width-end];
+         minmax(0, var(--_breakout-size)) [breakout-end]
+         minmax(var(--_padding-inline), 1fr) [full-width-end];
    }
 
    .content-grid > :not(.breakout, .full-width),
@@ -330,34 +333,56 @@
       font-weight: var(--fw-regular);
    }
 
-   .margin-bottom-100 {
+   .mb-100 {
       margin-bottom: var(--spacing-100);
    }
-   .margin-bottom-200 {
+   .mb-150 {
+      margin-bottom: var(--spacing-150);
+   }
+   .mb-200 {
       margin-bottom: var(--spacing-200);
    }
-   .margin-bottom-300 {
+   .mb-250 {
+      margin-bottom: var(--spacing-250);
+   }
+   .mb-300 {
       margin-bottom: var(--spacing-300);
    }
-   .margin-bottom-400 {
+   .mb-350 {
+      margin-bottom: var(--spacing-350);
+   }
+   .mb-400 {
       margin-bottom: var(--spacing-400);
    }
-   .margin-bottom-500 {
+   .mb-450 {
+      margin-bottom: var(--spacing-450);
+   }
+   .mb-500 {
       margin-bottom: var(--spacing-500);
    }
-   .margin-bottom-600 {
+   .mb-550 {
+      margin-bottom: var(--spacing-550);
+   }
+   .mb-600 {
       margin-bottom: var(--spacing-600);
    }
-   .margin-bottom-700 {
+   .mb-650 {
+      margin-bottom: var(--spacing-650);
+   }
+   .mb-700 {
       margin-bottom: var(--spacing-700);
    }
-   .margin-bottom-800 {
-      margin-bottom: var(--spacing-800);
+   .mb-750 {
+      margin-bottom: var(--spacing-750);
    }
-   .margin-bottom-900 {
-      margin-bottom: var(--spacing-900);
-   }
-   .margin-bottom-950 {
-      margin-bottom: var(--spacing-950);
+
+   @media screen and (min-width: 50rem) {
+      .img-fluid {
+         width: 100%;
+      }
+
+      .order-lg-1 {
+         order: 1;
+      }
    }
 }
