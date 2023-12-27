@@ -41,9 +41,12 @@
 
       <main class="content-grid">
          <h1 class="u-hide-visually">Lightning Railways</h1>
-         <section class="full-width content-grid bg-secondary mb-500">
+         <section class="full-width content-grid bg-secondary">
             <div class="breakout even-columns mb-750">
-               <img class="order-lg-1" src="imgs/train.png" alt="modern train" />
+               <img
+                  class="order-lg-1"
+                  src="imgs/train.png"
+                  alt="фото сучасного потяга" />
                <div>
                   <p class="primary-heading text-primary-100 mb-200">
                      Розпочни свій шлях блискавично!
@@ -60,133 +63,120 @@
             </div>
          </section>
 
-         <section class="mb-750">
-            <h2 class="text-center text-primary-400 fw-regular mb-150">
-               Наші послуги
-            </h2>
-            <p class="primary-heading text-center mb-500">
-               Handshake infographic mass market crowdfunding iteration
-            </p>
-            <ul
-               class="feature-list | even-columns"
-               style="--_column-gap: var(--spacing-600)">
-               <li class="feature">
+         <section class="full-width bg-primary-300 mb-400">
+            <div class="search | bg-secondary">
+               <h2 class="u-hide-visually">Пошук поїздів</h2>
+               <p class="primary-heading text-center mb-300">Куди їдемо?</p>
+               <form class="search-form | mb-350">
+                  <div>
+                     <label for="departure">Пункт відправлення:</label>
+                     <input name="station" list="stations" id="departure" />
+                  </div>
+                  <a href="#" class="change-directions-button">
+                     <img
+                        src="imgs/change_ direction.png"
+                        alt="Змінити пункт Відправлення" />
+                  </a>
+                  <div>
+                     <label for="destination">Пункт призначення:</label>
+                     <input name="station" list="stations" id="destination" />
+                  </div>
+
+                  <datalist id="stations">
+                     <option value="Київ"></option>
+                     <option value="Львів"></option>
+                     <option value="Полтава"></option>
+                     <option value="Вінниця"></option>
+                     <option value="Харків"></option>
+                  </datalist>
+               </form>
+            </div>
+         </section>
+
+         <section class="mb-400">
+            <h2 class="primary-heading text-center fw-bold mb-500">Новини</h2>
+            <ul class="even-columns" style="--_column-gap: var(--spacing-600)">
+               <li>
                   <img
-                     src="imgs/feature1.png"
-                     alt="image of the cool feature"
+                     src="imgs/new_train.png"
+                     alt="Новий потяг"
                      class="img-fluid mb-250" />
-                  <h3 class="fw-regular mb-150">Доступність</h3>
-                  <p>Робимо наші послуги доступними кожному</p>
+                  <h3 class="fw-regular mb-150">Ми оновили пасажирські вагони!</h3>
+                  <a href="#">Дізнатись більше...</a>
                </li>
-               <li class="feature">
+               <li>
                   <img
-                     src="imgs/people_shaking_hands.png"
-                     alt="two people shaking hands"
+                     src="imgs/jobs.png"
+                     alt="Віканції у нашій компанії"
                      class="img-fluid mb-250" />
-                  <h3 class="fw-regular mb-150">Страхування</h3>
-                  <p>Ми гарантуємо вам страхування під час поїздки</p>
+                  <h3 class="fw-regular mb-150">Вакансії у Lightning Railways</h3>
+                  <a href="#">Дізнатись більше...</a>
                </li>
-               <li class="feature">
+               <li>
                   <img
-                     src="imgs/feature3.png"
-                     alt="image of the cool feature"
+                     src="imgs/fun_center.png"
+                     alt="Вагон - розважальний центр"
                      class="img-fluid mb-250" />
-                  <h3 class="fw-regular mb-150">Cool feature</h3>
-                  <p>Learning curve network effects return on investment</p>
+                  <h3 class="fw-regular mb-150">Вагон - розважальний центр</h3>
+                  <a href="#">Дізнатись більше...</a>
                </li>
             </ul>
          </section>
 
-         <section class="even-columns" style="--_column-gap: var(--spacing-650)">
-            <div>
+         <section
+            class="full-width bg-primary-300"
+            style="--_column-gap: var(--spacing-650)">
+            <h2 class="primary-heading text-center fw-bold mt-400 mb-400">
+               Гарантії
+            </h2>
+            <div class="even-columns">
                <img
-                  src="imgs/connect_with_customer.png"
+                  src="imgs/locks.png"
                   alt="man with a phone smiles while talking to a customer" />
                <div>
-                  <img src="imgs/statistics.svg" alt="" />
-                  <p class="text-secondary fw-bold">30%</p>
-                  <p class="text-secondary">
-                     Збільшення клієтської бази у 2023 році
-                  </p>
+                  <h2 class="secondary-heading mb-350">
+                     Ми піклуємось про наший клієнтів
+                  </h2>
+                  <ul class="mb-400">
+                     <li>100% повернення коштів, якщо поїздку не було здійснено</li>
+                     <li>Страхування усіх клієнтів</li>
+                     <li>Найнижчі ціни на ринку</li>
+                  </ul>
+                  <a href="" class="button">Повернутись до покупки квитків</a>
                </div>
-            </div>
-            <div>
-               <h2 class="secondary-heading mb-350">
-                  Ми з'єднуємо наших клієнтів з найкращими спеціалістами та
-                  допомагаємо їм вибрати найкращий маршрут
-               </h2>
-               <ul class="mb-400">
-                  <li>Ми з'єднуємо наших клієнтів з найкращими спеціалістами</li>
-                  <li>Advisor success customer launch party</li>
-                  <li>Business-to-consumer long tail</li>
-               </ul>
-               <a href="" class="button">Start now</a>
             </div>
          </section>
 
-         <section class="full-width bg-secondary">
-            <h2 class="primary-heading text-primary-100">
-               Відгуки від наших реальних клієнтів!
+         <section class="testimonials | full-width bg-secondary mb-600">
+            <h2 class="primary-heading text-primary-100 mb-450">
+               Відгуки від наших клієнтів!
             </h2>
             <div class="even-columns">
                <div class="testimonial-card bg-primary-100">
-                  <p>
-                     “Buyer buzz partner network disruptive non-disclosure agreement
-                     business”
-                  </p>
-                  <img src="imgs/client1_clipped.svg" alt="photo of our customer" />
-                  <span class="text-secondary fw-bold">Albus Dumbledore</span>
-                  <span class="text-secondary">Manager @Howarts</span>
+                  <p>“Приємно вражена чистотою у вагонах.”</p>
+                  <div class="author">
+                     <img src="imgs/client3_clipped.svg" alt="Фото користувача" />
+                     <span class="text-secvondary fw-bold">Анна Константинівна</span>
+                  </div>
                </div>
                <div class="testimonial-card bg-primary-100">
                   <p>
-                     “Learning curve infrastructure value proposition advisor
-                     strategy user experience hypotheses investor.”
+                     “Приємні та ввічливі провідники, легкий спосіб придбати квиток
+                     онлайн”
                   </p>
-                  <img src="imgs/client2_clipped.svg" alt="photo of our customer" />
-                  <span class="text-secondary fw-bold">Severus Snape</span>
-                  <span class="text-secondary">Manager @Slytherin</span>
+                  <div class="author">
+                     <img src="imgs/client2_clipped.svg" alt="фото " />
+                     <span class="text-secondary fw-bold">Сергій Чирков</span>
+                  </div>
                </div>
                <div class="testimonial-card bg-primary-100">
-                  <p>
-                     “Release facebook responsive web design business model canvas
-                     seed money monetization.”
-                  </p>
-                  <img src="imgs/client3_clipped.svg" alt="photo of our customer" />
-                  <span class="text-secondary fw-bold">Harry Potter</span>
-                  <span class="text-secondary">Team Leader @Gryffindor</span>
+                  <p>“Порівняно з УкрЗалізнецею - це рай”</p>
+                  <div class="author">
+                     <img src="imgs/client1_clipped.svg" alt="фото " />
+                     <span class="text-secondary fw-bold">Констянтин Власюк</span>
+                  </div>
                </div>
             </div>
-            <div class="button-group">
-               <button class="arrow">
-                  <img src="imgs/arrow-right.svg" alt="go right" />
-               </button>
-               <button class="arrow">
-                  <img src="imgs/arrow-left.svg" alt="go left" />
-               </button>
-            </div>
-         </section>
-
-         <section>
-            <h2 class="u-hide-visually">FAQ's</h2>
-            <img src="imgs/work_process.png" alt="" />
-            <div class="even-columns">
-               <p class="secondary-heading">
-                  We connect our customers with the best, and help them keep up-and
-                  stay open.
-               </p>
-               <ul>
-                  <li>We connect our customers with the best?</li>
-                  <li>Android research & development rockstar?</li>
-               </ul>
-            </div>
-         </section>
-
-         <section>
-            <h2 class="text-center text-primary-400 fw-regular">Our Blog</h2>
-            <p class="primary-heading text-center">
-               Value proposition accelerator product management venture
-            </p>
          </section>
       </main>
 
